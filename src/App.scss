@@ -1,0 +1,17 @@
+$black-color: #000000;
+$border-color: #E1E1E1;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $black-color;
+}

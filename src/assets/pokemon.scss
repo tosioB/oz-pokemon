@@ -1,0 +1,54 @@
+@import '../App.scss';
+
+.pokemon {
+  min-width: 320px;
+  max-width: 768px;
+  padding: 0 24px;
+  margin: 0 auto;
+  .main-title {
+    padding: 12px 0;
+    font-size: 32px;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: $border-color;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    margin-top: 24px;
+    a {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  .main-page {
+    .pokemon-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .detail-page {
+    .img-box {
+      display: block;
+      width: 240px;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .desc {
+      margin-top: 8px;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
