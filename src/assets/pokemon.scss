@@ -1,6 +1,7 @@
 @import '../App.scss';
 
 .pokemon {
+  $page-blank: 48px 0;
   min-width: 320px;
   max-width: 768px;
   padding: 0 24px;
@@ -23,32 +24,84 @@
     }
   }
   .main-page {
-    .pokemon-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+    padding: $page-blank;
   }
   .detail-page {
-    .img-box {
-      display: block;
-      width: 240px;
+    padding: $page-blank;
+    .pokemon-box {
+      width: 300px;
       margin: 0 auto;
-      img {
+      background-color: #FAFAFA;
+      border: 1px solid;
+      border-color: $border-color;
+      padding: 20px;
+      border-radius: 20px;
+      position: relative;
+      .img-box {
         display: block;
-        width: 100%;
+        // width: 240px;
+        margin: 0 auto;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .name {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .desc {
+        margin-top: 8px;
+        font-size: 18px;
+        text-align: center;
+        word-break: keep-all;
+      }
+      .favorite-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
       }
     }
-    .name {
-      font-size: 24px;
-      font-weight: 700;
-      text-align: center;
+    
+  }
+  .search-page {
+    padding: $page-blank;
+  }
+  .favorite-page {
+    padding: $page-blank;
+  }
+  .inp-box {
+    input[type="text"] {
+      padding: 0 8px;
+      height: 32px;
+      border: 1px solid #E1E1E1;
+      border-radius: 4px;
+      &:focus {
+        outline: 1px solid #000000;
+        outline-offset: -1px;
+      }
     }
-    .desc {
-      margin-top: 8px;
-      font-size: 18px;
-      text-align: center;
+  }
+  .favorite-btn {
+    margin-left: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &.active {
+      color: red;
+    }
+  }
+  .pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    li {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
